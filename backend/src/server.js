@@ -14,6 +14,6 @@ app.get("/api/v1/notes",(req,res)=>{
 })
 
 app.listen(PORT,()=>{
-    console.log(`Server started running on http://localhost:{PORT}`);
+    console.log(`Server started running on http://localhost:${PORT}`);
     
 })
