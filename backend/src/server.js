@@ -1,6 +1,7 @@
 import express from "express";
 import notesRoutes from "./routes/notesRoutes.js";
 import { connectDB } from "./config/db.js";
+import swaggerDocs from './docs/swagger.js';
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -12,9 +13,7 @@ app.use(express.json())
 
 app.use("/api/v1/notes",notesRoutes);
 
-app.get("/api/v1/notes",(req,res)=>{
-    res.send("Your notes..")
-})
+swaggerDocs(app);
 
 app.listen(PORT,()=>{
     console.log(`Server started running on http://localhost:${PORT}`);
