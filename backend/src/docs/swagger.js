@@ -12,6 +12,33 @@ const options = {
       version: '1.0.0',
       description: 'API Documentation',
     },
+    components: {
+      schemas: {
+        Note: {
+          type: "object",
+          properties: {
+            _id: {
+              type: "string",
+            },
+            title: {
+              type: "string",
+            },
+            content: {
+              type: "string",
+            },
+            createdAt: {
+              type: "string",
+              format: "date-time",
+            },
+            updatedAt: {
+              type: "string",
+              format: "date-time",
+            },
+          },
+        },
+      },
+    },
+
     servers: [
       {
         url: `http://localhost:${PORT}`,
