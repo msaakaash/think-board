@@ -42,7 +42,7 @@ Make sure you have the following installed on your system:
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/think-board.git
+git clone https://github.com/msaakaash/think-board.git
 cd think-board
 ```
 
