@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
-
+import swaggerDocs from "./docs/swagger.js";
 import notesRoutes from "./routes/notesRoutes.js";
 import { connectDB } from "./config/db.js";
 import rateLimiter from "./middleware/rateLimiter.js";
@@ -23,6 +23,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 app.use(express.json()); // this middleware will parse JSON bodies: req.body
 app.use(rateLimiter);
+swaggerDocs(app);
 
 // our simple custom middleware
 // app.use((req, res, next) => {
