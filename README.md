@@ -46,7 +46,7 @@ git clone https://github.com/msaakaash/think-board.git
 cd think-board
 ```
 
-#### 🔧 Backend Setup
+#### Backend Setup
 
 ```bash
 cd backend/src
